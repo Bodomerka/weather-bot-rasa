@@ -9,3 +9,7 @@ Thumbs.db
 
 .rasa/
 .rasa/cache/
+
+.test/
+.results/
+.models/
