@@ -1,0 +1,168 @@
+version: "3.1"
+nlu:
+- intent: current_weather
+  examples: |
+    - What is the weather like in [New York](city) today?
+    - Show me the current weather in [Berlin](city).
+    - How's the weather in [Tokyo](city) at the moment?
+    - Tell me the temperature in [Los Angeles](city) right now.
+    - What are the weather conditions in [Toronto](city) today?
+    - Give me the latest weather update for [Madrid](city).
+    - What's the weather like in [Sydney](city) currently?
+    - Can you tell me the weather in [Moscow](city) now?
+    - How warm is it in [Chicago](city) today?
+    - What's the current temperature in [Amsterdam](city)?
+    - Check the weather for [Vienna](city) at this moment.
+    - Is it raining in [Rome](city) right now?
+    - What’s the wind speed in [San Francisco](city) today?
+    - Is it sunny in [Barcelona](city) at the moment?
+    - Tell me if it's snowing in [Oslo](city) now.
+    - How cloudy is it in [Copenhagen](city) today?
+    - What’s the humidity level in [Lisbon](city) currently?
+    - How cold is it in [Stockholm](city) right now?
+    - Give me real-time weather for [Prague](city).
+    - What's the weather status in [Dublin](city) today?
+    - How's the air quality in [Brussels](city) now?
+    - Is it stormy in [Seoul](city) at this moment?
+    - What's the UV index in [Helsinki](city) today?
+    - Can I expect fog in [Mexico City](city) right now?
+    - What’s the pressure level in [Buenos Aires](city) today?
+    - How’s the overall weather in [Athens](city) currently?
+    - Is it windy in [Hong Kong](city) at the moment?
+    - What's the visibility in [Dubai](city) right now?
+    - Do I need an umbrella in [Istanbul](city) today?
+    - How's the sunrise and sunset time in [Jakarta](city) today?
+    - What's the weather like in [Cairo](city) currently?
+    - Tell me the weather forecast for [Bangkok](city) today.
+    - How's the weather in [Singapore](city) at this moment?
+    - What are the weather conditions in [Kuala Lumpur](city) right now?
+    - Give me the latest weather update for [Manila](city).
+    - What's the weather like in [Beijing](city) today?
+    - Can you tell me the weather in [Tokyo](city) now?
+    - How warm is it in [Shanghai](city) today?
+    - What's the current temperature in [Seoul](city)?
+    - Check the weather for [Mumbai](city) at this moment.
+    - Is it raining in [Delhi](city) right now?
+    - What’s the wind speed in [Karachi](city) today?
+    - Is it sunny in [Istanbul](city) at the moment?
+    - Tell me if it's snowing in [Moscow](city) now.
+    - How cloudy is it in [Paris](city) today?
+    - What’s the humidity level in [London](city) currently?
+    - How cold is it in [Berlin](city) right now?
+    - Give me real-time weather for [Madrid](city).
+    - What's the weather status in [Rome](city) today?
+    - How's the air quality in [Vienna](city) now?
+    - Is it stormy in [Amsterdam](city) at this moment?
+    - What's the UV index in [Athens](city) today?
+    - Can I expect fog in [Brussels](city) right now?
+
+- intent: forecast_weather
+  examples: |
+    - What will the weather be like [tomorrow](date_time) in [Kyiv](city)?
+    - Show me the weather forecast for [the day after tomorrow](date_time) in [Paris](city).
+    - How's the weather in [London](city) in [two days](date_time)?
+    - Will it rain in [Berlin](city) in [three days](date_time)?
+    - What’s the temperature forecast for [New York](city) in [four days](date_time)?
+    - Tell me if it will snow in [Tokyo](city) in [five days](date_time).
+    - How warm will it be in [Los Angeles](city) in [six days](date_time)?
+    - Give me the seven-day weather outlook for [Toronto](city).
+    - What’s the weather prediction for [Madrid](city) in [three days](date_time)?
+    - Will it be sunny in [Sydney](city) in [five days](date_time)?
+    - Tell me the expected weather in [Moscow](city) [next Monday](date_time).
+    - What will the wind speed be in [Chicago](city) in [four days](date_time)?
+    - Show me the UV index for [Amsterdam](city) in [two days](date_time).
+    - Will it be cloudy in [Vienna](city) in [six days](date_time)?
+    - What’s the humidity forecast for [Rome](city) in [five days](date_time)?
+    - How cold will it be in [San Francisco](city) in [seven days](date_time)?
+    - Will there be fog in [Barcelona](city) in [three days](date_time)?
+    - What’s the air pressure in [Oslo](city) in [four days](date_time)?
+    - Is a thunderstorm expected in [Copenhagen](city) in [six days](date_time)?
+    - Will the temperature drop in [Lisbon](city) in [two days](date_time)?
+    - Tell me the highest temperature in [Stockholm](city) in [seven days](date_time).
+    - What’s the chance of rain in [Prague](city) in [five days](date_time)?
+    - Is there a heatwave expected in [Dublin](city) in [three days](date_time)?
+    - Will the wind be strong in [Brussels](city) in [four days](date_time)?
+    - How’s the weather trend in [Seoul](city) over the next [seven days](date_time)?
+    - Will it be chilly in [Helsinki](city) in [six days](date_time)?
+    - What’s the general forecast for [Mexico City](city) in [seven days](date_time)?
+    - Tell me if it will be stormy in [Buenos Aires](city) in [five days](date_time).
+    - Is it safe to go outside in [Athens](city) in [three days](date_time)?
+    - Will there be extreme temperatures in [Hong Kong](city) in [four days](date_time)?
+    - What’s the weather outlook for [Dubai](city) in [two days](date_time)?
+    - Will it be windy in [Istanbul](city) in [seven days](date_time)?
+    - Tell me the sunrise and sunset time in [Jakarta](city) in [five days](date_time).
+    - What’s the weather forecast for [Cairo](city) in [six days](date_time)?
+    - Will it be sunny in [Bangkok](city) in [three days](date_time)?
+    - Tell me the weather prediction for [Singapore](city) in [four days](date_time).
+    - How warm will it be in [Kuala Lumpur](city) in [seven days](date_time)?
+    - Give me the seven-day weather outlook for [Manila](city).
+    - What’s the weather prediction for [Beijing](city) in [five days](date_time)?
+    - Will it be sunny in [Tokyo](city) in [six days](date_time)?
+    - What will the weather be like in [New York](city) in [two days](date_time)?
+    - What is the weather in [Los Angeles](city) [tomorrow](date_time)?
+    - Weather forecast for [Berlin](city) on [2025.06.15](date_time)
+    - Will it be [rainy](weather_condition) in [Tokyo](city) in [four days](date_time)?
+    - How will the weather be in [Madrid](city) on [14.06.2025](date_time)?
+    - What’s the weather in [Rome](city) [tomorrow](date_time)?
+    - Will it be [cloudy](weather_condition) in [Dubai](city) on [2025.06.17](date_time)?
+    - Give me the forecast for [Chicago](city) in [three days](date_time).
+    - Will there be [snow](weather_condition) in [Moscow](city) on [2025.06.16](date_time)?
+    - Is it going to be [windy](weather_condition) in [Toronto](city) in [five days](date_time)?
+    - What is the temperature in [Seoul](city) on [2025.06.18](date_time)?
+    - How warm will it be in [Athens](city) [tomorrow](date_time)?
+    - What’s the chance of [rain](weather_condition) in [Bangkok](city) in [four days](date_time)?
+    - Will it be [foggy](weather_condition) in [Vienna](city) in [two days](date_time)?
+    - Show me the weather in [San Francisco](city) for [the day after tomorrow](date_time).
+    - Is there a storm expected in [Berlin](city) in [five days](date_time)?
+    - Will it be [hot](weather_condition) in [Istanbul](city) on [2025.06.19](date_time)?
+    - What’s the humidity level in [Lisbon](city) [tomorrow](date_time)?
+    - Is it going to be [cold](weather_condition) in [Stockholm](city) in [three days](date_time)?
+    - What is the forecast for [Prague](city) on [16.06.2025](date_time)?
+    - What’s the UV index in [Cairo](city) in [two days](date_time)?
+    - Will it be [stormy](weather_condition) in [Helsinki](city) on [2025.06.15](date_time)?
+    - How will the weather feel in [Dubai](city) [tomorrow](date_time)?
+    - What’s the wind speed in [Oslo](city) in [four days](date_time)?
+    - Will it be [sunny](weather_condition) in [Melbourne](city) on [2025.06.17](date_time)?
+    - Is it going to rain in [Brussels](city) in [five days](date_time)?
+    - How is the air pressure in [Buenos Aires](city) on [2025.06.18](date_time)?
+    - What’s the weather trend in [Singapore](city) in [three days](date_time)?
+    - Will the weather be stable in [Munich](city) [tomorrow](date_time)?
+    - Will it be [drizzly](weather_condition) in [Mexico City](city) in [two days](date_time)?
+    - What’s the expected precipitation in [Warsaw](city) on [2025.06.16](date_time)?
+    - Will there be a heatwave in [Jakarta](city) in [four days](date_time)?
+    - Will it be [mild](weather_condition) in [Vancouver](city) in [five days](date_time)?
+    - How will the sky look in [Sydney](city) [tomorrow](date_time)?
+    - What’s the visibility in [Beijing](city) in [three days](date_time)?
+    - Will it be [chilly](weather_condition) in [Lima](city) on [2025.06.19](date_time)?
+    - What’s the chance of thunderstorms in [Cape Town](city) in [two days](date_time)?
+    - How strong will the wind be in [Madrid](city) in [five days](date_time)?
+    - What will the cloud cover be in [Seoul](city) on [2025.06.17](date_time)?
+    - Is it likely to snow in [Moscow](city) in [three days](date_time)?
+    - Will it be [overcast](weather_condition) in [Rio de Janeiro](city) [tomorrow](date_time)?
+    - What’s the chance of fog in [Dubai](city) in [four days](date_time)?
+    - What’s the expected temperature in [Amsterdam](city) on [2025.06.16](date_time)?
+    - How will the weather behave in [Berlin](city) [tomorrow](date_time)?
+    - Will there be [hail](weather_condition) in [Tokyo](city) in [five days](date_time)?
+    - What’s the general outlook for [New York](city) in [three days](date_time)?
+    - How will the temperature change in [Vienna](city) in [four days](date_time)?
+    - What will the conditions be in [London](city) on [2025.06.18](date_time)?
+    - Is there a possibility of [light rain](weather_condition) in [Paris](city) in [two days](date_time)?
+    
+
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Hey there
+
+- intent: goodbye
+  examples: |
+    - Bye
+    - Goodbye
+    - See you later
+
+- intent: unknown
+  examples: |
+    - Book me a flight
+    - Tell me a joke
+    - What’s the time in space?

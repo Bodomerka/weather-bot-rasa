@@ -1,0 +1,47 @@
+version: "3.1"
+intents:
+  - current_weather
+  - forecast_weather
+  - greet
+  - goodbye
+  - nlu_fallback
+
+entities:
+  - city
+  - date_time
+  - weather_condition
+
+slots:
+  city:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: city
+  date_time:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: date_time
+  weather_condition:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: weather_condition
+
+actions:
+  - action_get_current_weather
+  - action_get_forecast_weather
+  - utter_greet
+  - utter_goodbye
+  - utter_happy
+
+responses:
+  utter_greet:
+    - text: "Hi! How can I help you with the weather?"
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+  utter_happy:
+    - text: "Great, carry on!"

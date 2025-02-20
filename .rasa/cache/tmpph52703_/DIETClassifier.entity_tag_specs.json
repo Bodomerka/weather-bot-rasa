@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-city",
+      "2": "I-city",
+      "3": "L-city",
+      "4": "U-city",
+      "5": "B-date_time",
+      "6": "I-date_time",
+      "7": "L-date_time",
+      "8": "U-date_time",
+      "9": "B-weather_condition",
+      "10": "I-weather_condition",
+      "11": "L-weather_condition",
+      "12": "U-weather_condition",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-city": 1,
+      "I-city": 2,
+      "L-city": 3,
+      "U-city": 4,
+      "B-date_time": 5,
+      "I-date_time": 6,
+      "L-date_time": 7,
+      "U-date_time": 8,
+      "B-weather_condition": 9,
+      "I-weather_condition": 10,
+      "L-weather_condition": 11,
+      "U-weather_condition": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

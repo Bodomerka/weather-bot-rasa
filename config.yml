@@ -1,0 +1,23 @@
+language: en
+pipeline:
+- name: WhitespaceTokenizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: DIETClassifier
+  epochs: 100
+- name: EntitySynonymMapper
+- name: ResponseSelector
+- name: FallbackClassifier
+  threshold: 0.7    # Збільште поріг, щоб уникнути частого спрацьовування nlu_fallback
+
+policies:
+- name: MemoizationPolicy
+- name: RulePolicy
+- name: TEDPolicy
+  epochs: 100
+assistant_id: 20250220-112135-coplanar-halftone

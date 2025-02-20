@@ -1,0 +1,62 @@
+version: "3.1"
+
+stories:
+  # Історія для привітання
+  - story: greeting
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  # Історія для прощання
+  - story: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  # Історія для запиту поточної погоди
+  - story: current weather
+    steps:
+      - intent: current_weather
+        entities:
+          - city: "Kyiv"
+      - slot_was_set:
+          - city: "Kyiv"
+      - action: action_get_current_weather
+
+  # Історія для запиту прогнозу з конкретною умовою погоди
+  - story: forecast weather with condition
+    steps:
+      - intent: forecast_weather
+        entities:
+          - city: "Bangkok"
+          - date_time: "in three days"
+          - weather_condition: "sunny"
+      - slot_was_set:
+          - city: "Bangkok"
+          - date_time: "in three days"
+          - weather_condition: "sunny"
+      - action: action_get_forecast_weather
+
+  # Історія для запиту прогнозу без конкретної умови
+  - story: forecast weather without condition
+    steps:
+      - intent: forecast_weather
+        entities:
+          - city: "Kyiv"
+          - date_time: "tomorrow"
+      - slot_was_set:
+          - city: "Kyiv"
+          - date_time: "tomorrow"
+      - action: action_get_forecast_weather
+
+  # Історія для запиту прогнозу без міста
+  - story: forecast weather missing city
+    steps:
+      - intent: forecast_weather
+        entities:
+          - date_time: "tomorrow"
+      - action: action_get_forecast_weather
+  - story: forecast weather with date
+    steps:
+    - intent: forecast_weather
+    - action: action_get_forecast_weather
