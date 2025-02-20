@@ -1,1 +1,11 @@
 rasa_env/
+
+*.pyc
+*.log
+__pycache__/
+
+.DS_Store
+Thumbs.db
+
+.rasa/
+.rasa/cache/

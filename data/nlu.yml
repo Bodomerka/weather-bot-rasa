@@ -55,7 +55,32 @@ nlu:
     - Is it stormy in [Amsterdam](city) at this moment?
     - What's the UV index in [Athens](city) today?
     - Can I expect fog in [Brussels](city) right now?
-
+    - Temperature in [Nice](city) today.
+    - Weather in [Oslo](city) right now.
+    - Current conditions in [Dublin](city).
+    - Humidity level in [London](city) currently.
+    - Wind speed in [Chicago](city) today.
+    - Rain status in [Tokyo](city) now.
+    - Snowfall in [Moscow](city) at the moment.
+    - UV index in [Lisbon](city) today.
+    - Air quality in [Brussels](city) currently.
+    - Visibility in [Dubai](city) right now.
+    - Pressure level in [Buenos Aires](city) today.
+    - Overall weather in [Athens](city) currently.
+    - Sunrise and sunset time in [Jakarta](city) today.
+    - Weather forecast for [Cairo](city) today.
+    - Weather in [Bangkok](city) at the moment.
+    - Weather conditions in [Singapore](city) right now.
+    - Weather in [Kuala Lumpur](city) today.
+    - Weather update for [Manila](city).
+    - Weather in [Beijing](city) right now.
+    - Weather in [Tokyo](city) at the moment.
+    - Temperature in [Seoul](city) today.
+    - Weather in [Shanghai](city) right now.
+    - Weather in [Mumbai](city) at the moment.
+    - Weather in [Delhi](city) today.
+    - Weather in [Karachi](city) right now.
+    - Weather in [Istanbul](city) at the moment.
 - intent: forecast_weather
   examples: |
     - What will the weather be like [tomorrow](date_time) in [Kyiv](city)?
@@ -147,7 +172,22 @@ nlu:
     - How will the temperature change in [Vienna](city) in [four days](date_time)?
     - What will the conditions be in [London](city) on [2025.06.18](date_time)?
     - Is there a possibility of [light rain](weather_condition) in [Paris](city) in [two days](date_time)?
-    
+    - Weather in [Kyiv](city) [tomorrow](date_time).
+    - Forecast for [Paris](city) [the day after tomorrow](date_time).
+    - Temperature in [London](city) in [two days](date_time).
+    - Rain prediction in [Berlin](city) in [three days](date_time).
+    - Expected weather in [New York](city) in [four days](date_time).
+    - Snowfall chance in [Tokyo](city) in [five days](date_time).
+    - Warmth level in [Los Angeles](city) in [six days](date_time).
+    - Seven-day forecast for [Toronto](city).
+    - Weather prediction for [Madrid](city) in [three days](date_time).
+    - Sunshine probability in [Sydney](city) in [five days](date_time).
+    - Weather forecast for [Moscow](city) [next Monday](date_time).
+    - Wind speed in [Chicago](city) in [four days](date_time).
+    - UV index for [Amsterdam](city) in [two days](date_time).
+    - Cloudiness in [Vienna](city) in [six days](date_time).
+    - Humidity forecast for [Rome](city) in [five days](date_time).
+    - Coldness level in [San Francisco](city) in [five days](date_time).
 
 - intent: greet
   examples: |

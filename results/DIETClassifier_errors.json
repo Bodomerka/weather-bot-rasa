@@ -1,0 +1,104 @@
+[
+  {
+    "text": "What’s the chance of rain in Bangkok in four days?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 25,
+        "value": "rain",
+        "entity": "weather_condition"
+      },
+      {
+        "start": 29,
+        "end": 36,
+        "value": "Bangkok",
+        "entity": "city"
+      },
+      {
+        "start": 40,
+        "end": 49,
+        "value": "four days",
+        "entity": "date_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "city",
+        "start": 29,
+        "end": 36,
+        "confidence_entity": 0.9997424483299255,
+        "value": "Bangkok",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_time",
+        "start": 40,
+        "end": 49,
+        "confidence_entity": 0.9997968077659607,
+        "value": "four days",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Is there a possibility of light rain in Paris in two days?",
+    "entities": [
+      {
+        "start": 26,
+        "end": 36,
+        "value": "light rain",
+        "entity": "weather_condition"
+      },
+      {
+        "start": 40,
+        "end": 45,
+        "value": "Paris",
+        "entity": "city"
+      },
+      {
+        "start": 49,
+        "end": 57,
+        "value": "two days",
+        "entity": "date_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "weather_condition",
+        "start": 26,
+        "end": 31,
+        "confidence_entity": 0.986395001411438,
+        "value": "light",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "city",
+        "start": 40,
+        "end": 45,
+        "confidence_entity": 0.99951171875,
+        "value": "Paris",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "date_time",
+        "start": 49,
+        "end": 57,
+        "confidence_entity": 0.9998109936714172,
+        "value": "two days",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

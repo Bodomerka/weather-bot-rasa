@@ -1,91 +1,57 @@
-#### This file contains tests to evaluate that your bot behaves as expected.
-#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+version: "3.1"
 
-stories:
-- story: happy path 1
-  steps:
-  - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
+test_stories:
+  - story: Test greeting
+    steps:
+      - intent: greet
+      - action: utter_greet
 
-- story: happy path 2
-  steps:
-  - user: |
-      hello there!
-    intent: greet
-  - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
+  - story: Test goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
 
-- story: sad path 1
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      yes
-    intent: affirm
-  - action: utter_happy
+  - story: Test current weather
+    steps:
+      - intent: current_weather
+        entities:
+          - city: "Kyiv"
+      - slot_was_set:
+          - city: "Kyiv"
+      - action: action_get_current_weather
 
-- story: sad path 2
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      not really
-    intent: deny
-  - action: utter_goodbye
+  - story: Test forecast weather with condition
+    steps:
+      - intent: forecast_weather
+        entities:
+          - city: "Bangkok"
+          - date_time: "in three days"
+          - weather_condition: "sunny"
+      - slot_was_set:
+          - city: "Bangkok"
+          - date_time: "in three days"
+          - weather_condition: "sunny"
+      - action: action_get_forecast_weather
 
-- story: sad path 3
-  steps:
-  - user: |
-      hi
-    intent: greet
-  - action: utter_greet
-  - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      no
-    intent: deny
-  - action: utter_goodbye
+  - story: Test forecast weather without condition
+    steps:
+      - intent: forecast_weather
+        entities:
+          - city: "Kyiv"
+          - date_time: "tomorrow"
+      - slot_was_set:
+          - city: "Kyiv"
+          - date_time: "tomorrow"
+      - action: action_get_forecast_weather
 
-- story: say goodbye
-  steps:
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
+  - story: Test forecast weather missing city
+    steps:
+      - intent: forecast_weather
+        entities:
+          - date_time: "tomorrow"
+      - action: action_get_forecast_weather
 
-- story: bot challenge
-  steps:
-  - user: |
-      are you a bot?
-    intent: bot_challenge
-  - action: utter_iamabot
+  - story: Test forecast weather with date only
+    steps:
+      - intent: forecast_weather
+      - action: action_get_forecast_weather
